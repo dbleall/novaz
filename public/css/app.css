@@ -1757,7 +1757,7 @@ select {
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
-  --bs-red: #dc3545;
+  --bs-red: #dd0000;
   --bs-orange: #fd7e14;
   --bs-yellow: #dd0000;
   --bs-green: #198754;
@@ -8786,7 +8786,7 @@ textarea.form-control-lg {
 /* rtl:end:remove */
 .text-primary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  color: #dd0000 !important;
 }
 .text-secondary {
   --bs-text-opacity: 1;
