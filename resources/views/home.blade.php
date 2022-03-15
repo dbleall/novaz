@@ -362,30 +362,36 @@
                 <h2 class="section-heading text-uppercase">Contact Us</h2>
                 {{-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> --}}
             </div>
-            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+            @if(Session::has('message_sent'))
+            <div class="alert alert-success" role="alert" >
+                {{ Session::get('message_sent') }}
+            </div>              
+            @endif 
+            <form action="{{ route('contact.send') }}" method="post" role="form" class="php-email-form" enctype="multpart/form-data">
+                @csrf
                 <div class="row align-items-stretch mb-5">
                     <div class="col-md-6">
                         <div class="form-group">
                             <!-- Name input-->
-                            <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                            <input class="form-control" name="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                         </div>
                         <div class="form-group">
                             <!-- Email address input-->
-                            <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                            <input class="form-control" name="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                         </div>
                         <div class="form-group mb-md-0">
-                            <!-- Phone number input-->
-                            <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            <!-- Subject input-->
+                            <input class="form-control" name="subject" type="tel" placeholder="Your Subject *" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="subject:required">A Subject  is required.</div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group form-group-textarea mb-md-0">
                             <!-- Message input-->
-                            <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                            <textarea class="form-control" name="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                         </div>
                     </div>

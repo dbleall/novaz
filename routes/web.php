@@ -30,6 +30,9 @@ Route::get('/webdesign', function(){
     return view('services/webdesign');
 });
 
-Route::get('/socialmedia', function(){
+Route::get('/social_media', function(){
     return view('services/social_media');
 });
+
+
+Route::post('/send-message',[ContactController::class, 'sendEmail'])->name('contact.send'); 

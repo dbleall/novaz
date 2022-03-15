@@ -57,7 +57,7 @@
                             @else
                                 <li class="nav-item"><a class="nav-link" href="{{ url('brand') }}#brand">Brand & Logo</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ url('webdesign') }}#webdesign">WebDesign</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ url('socialmedia') }}#social_media">Social Media</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ url('social_media') }}#social_media">Social Media</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ url('/') }}#portfolio">Portfolio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ url('/') }}#about">About</a></li>
                                 {{-- <li class="nav-item"><a class="nav-link" href="#team">Team</a></li> --}}
